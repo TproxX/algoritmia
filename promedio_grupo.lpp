@@ -1,0 +1,52 @@
+real aprobaron, no_aprobaron, codigo, nota1, nota2, nota3, promedio_estudiante, acumulado_grupo
+cadena [50] nombre
+caracter siga
+
+inicio
+    siga <- 'S'
+    aprobaron <- 0
+    no_aprobaron <- 0
+
+
+    mientras (siga = 'S') o (siga = 's') haga
+        escriba "nombre: "
+        lea nombre
+        escriba "codigo: "
+        lea codigo
+        escriba "nota 1: "
+        lea nota1
+        escriba "nota 2: "
+        lea nota2
+        escriba "nota 3: "
+        lea nota3
+    
+        promedio_estudiante <- (nota1 + nota2 + nota3) / 3
+        escriba "El promedio del estudiante es ", promedio_estudiante 
+        llamar nueva_linea
+    
+        si (promedio_estudiante < 3.5) entonces
+            escriba "No aprobo"
+            no_aprobaron <- no_aprobaron + 1
+        sino 
+            escriba "Aprobo"
+            aprobaron <- aprobaron +1
+        fin si
+        acumulado_grupo <- promedio_estudiante + acumulado_grupo  
+        acumulado_grupo <- acumulado_grupo / (no_aprobaron + aprobaron)
+     
+        llamar nueva_linea
+        escriba "desea continuar? (S/N) "
+        lea siga 
+        
+         llamar limpiar_pantalla
+     
+    fin mientras 
+     
+    escriba "Estudiantes aprobados: ", aprobaron
+    llamar nueva_linea
+    escriba "Estudiantes reprobados: ", no_aprobaron
+    llamar nueva_linea
+    escriba "El promedio del grupo es ", acumulado_grupo
+             
+
+fin

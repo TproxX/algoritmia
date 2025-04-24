@@ -1,0 +1,37 @@
+real horas1, salario, tarifa, hextra, tohextras, cantextras, horas2, contador
+
+inicio
+    contador <- 0 
+    tarifa <- 50000 
+    
+    mientras (contador <= 10) haga
+        escriba "Horas trabajadas: "
+        lea horas1
+        escriba "Tarifa por hora: ", tarifa
+     
+    hextra <- tarifa + (tarifa * 0.50)
+    salario <- horas1 * tarifa
+    cantextras <- horas1 - 40
+    
+    
+    si (horas1 > 40) entonces
+      tohextras <- hextra * cantextras
+      horas2 <- horas1 - cantextras
+      salario <- (horas2 * tarifa) + tohextras
+   fin si
+    
+    llamar nueva_linea 
+    escriba "valor de hora extra: ", hextra
+    llamar nueva_linea
+    escriba "valor total de horas extras trabajadas: ", tohextras
+    llamar nueva_linea
+    escriba "salario: ", salario
+    llamar nueva_linea
+    llamar nueva_linea
+    
+    contador <- contador + 1
+    
+    fin mientras
+   
+    
+fin

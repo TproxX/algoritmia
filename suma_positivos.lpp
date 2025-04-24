@@ -1,0 +1,17 @@
+entero numero, sumatoria
+
+inicio
+    numero <- 0
+    sumatoria <- 0
+    
+
+    mientras (numero >= 0 ) haga 
+         escriba "escriba el numero: "
+         lea numero
+         si (numero >= 0) entonces
+             sumatoria <- numero + sumatoria
+         fin si 
+    fin mientras
+    
+    escriba "suma: ", sumatoria
+fin

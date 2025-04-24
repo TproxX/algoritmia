@@ -1,0 +1,20 @@
+entero multiplicando, multiplicador, producto
+
+inicio 
+    multiplicando <- 0
+    multiplicador <- 1
+    producto <- 0
+    
+    escriba "Tabla del ?: "
+    lea multiplicando
+    
+    
+    mientras (multiplicador <= 10) haga
+        producto <- multiplicando * multiplicador
+        escriba multiplicando, " x ", multiplicador, " = ", producto 
+        llamar nueva_linea
+        
+        multiplicador <- multiplicador + 1
+        
+    fin mientras 
+fin
